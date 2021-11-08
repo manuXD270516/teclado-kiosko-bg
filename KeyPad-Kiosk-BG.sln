@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyPadNumeric-Kiosk-BG", "KeyPad-Kiosk-BG\KeyPadNumeric-Kiosk-BG.csproj", "{AB1C0196-4AF8-4273-9ED5-7E752FAEB2C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyPadQWERTY-Kiosk-BG", "KeyboardQWERTY-Kiosk-BH\KeyPadQWERTY-Kiosk-BG.csproj", "{E0687C96-C3BE-457B-BE9F-A78E529A24C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestKeyPads", "TestKeyPads\TestKeyPads.csproj", "{75DE49B6-0CB6-49DA-A23E-83AA9A217F71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB1C0196-4AF8-4273-9ED5-7E752FAEB2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1C0196-4AF8-4273-9ED5-7E752FAEB2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1C0196-4AF8-4273-9ED5-7E752FAEB2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1C0196-4AF8-4273-9ED5-7E752FAEB2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0687C96-C3BE-457B-BE9F-A78E529A24C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0687C96-C3BE-457B-BE9F-A78E529A24C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0687C96-C3BE-457B-BE9F-A78E529A24C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0687C96-C3BE-457B-BE9F-A78E529A24C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75DE49B6-0CB6-49DA-A23E-83AA9A217F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75DE49B6-0CB6-49DA-A23E-83AA9A217F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75DE49B6-0CB6-49DA-A23E-83AA9A217F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75DE49B6-0CB6-49DA-A23E-83AA9A217F71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72BD9D51-7960-495E-8407-E85948AB5DC4}
+	EndGlobalSection
+EndGlobal

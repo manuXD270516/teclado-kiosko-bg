@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TestKeyPads.exe" version="1.0.0.1" publicKeyToken="5bb01952fe084a89" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TestKeyPads" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="TestKeyPads.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyboardQWERTY-Kiosk-BH.dll" size="44544">
+      <assemblyIdentity name="KeyboardQWERTY-Kiosk-BH" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>+L0/7TEssVc+GzOJ6lEs8OnbEpTLUa5z4CoxcqziQiQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyPad-Kiosk-BG.dll" size="16384">
+      <assemblyIdentity name="KeyPad-Kiosk-BG" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>+20W87JIg0HhmeOFIZGe/jDgPbGSVMGy40nPEksJvxY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="10704">
+      <assemblyIdentity name="TestKeyPads" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>vItHlO7yUhq5xmXk4eYzKyhyo4Zm4xWonQtoCL89rfw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="TestKeyPads.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ji8aT6+d4QyGsLkWKNdTYyE7mNtRXIN9y+Xmyl/UOJU=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=BG\manuel.saavedra" issuerKeyHash="56696d915c6353fc636e67ebfbdb17bd75b992f6" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>NQLBNypHaJtBO8yp35PDnislHSuO59GSmaIqq8b4030=</DigestValue></Reference></SignedInfo><SignatureValue>nARqtOZMgHLDNghMmSTwtap+NXhMEfJGsJJXVW3V+7oCSW00zzu39k2/ukQLpZGGED3c4Z+U/N+A1VnS7w1RCp9zBGmFwPT5Ul9xZSlxH3X3uNab15pBw0j/PHoconLNMnrNfdOwKgciqk0LO69vMVyWXC9EiNKMiWlbfjgOksU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>uUm0+LR533PkyBgGZGY6BHrG7Ka+geiTF8YYN00GnxHWK7cP1Oc5Q9sUkgZmBbhuynzKgt6A3o3NGt1FnZOIO5gKD/0meR9hBGZhTS09pSUJxtMdd5AYu/b9h9cbzznKPZf73FV4DtH9dkRSlGUkobrJxFhCJSimj4F1lQi//MU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7dd3f8c6ab2aa29992d1e78e2b1d252b9ec393dfa9cc3b419b68472a37c10235" Description="" Url=""><as:assemblyIdentity name="TestKeyPads.exe" version="1.0.0.1" publicKeyToken="5bb01952fe084a89" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=BG\manuel.saavedra</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EcKmi+39PekNk/Sq83GZzxKndAesJ71Pvel3h2UFPKo=</DigestValue></Reference></SignedInfo><SignatureValue>s3Wx4/AFSxOmcUyB2gTnyi4dpSFSJkm94/CR9wLtH3G1PU8KN6IyTlKuR6Thzm0W40VQnvbYn/lzn7so1zXRPzTltUMfa0QETaH99qjspHdIejyFaOepjAZXd6z/phWUJFlDD3mjsvZjoVL6YF2iOgw54rHbp/4sVWEsrhVMYz8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>uUm0+LR533PkyBgGZGY6BHrG7Ka+geiTF8YYN00GnxHWK7cP1Oc5Q9sUkgZmBbhuynzKgt6A3o3NGt1FnZOIO5gKD/0meR9hBGZhTS09pSUJxtMdd5AYu/b9h9cbzznKPZf73FV4DtH9dkRSlGUkobrJxFhCJSimj4F1lQi//MU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQO77mhwfL9L9JVTrmQn/OwjANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQAQgBHAFwAbQBhAG4AdQBlAGwALgBzAGEAYQB2AGUAZAByAGEwHhcNMjExMTAxMTI0MjMxWhcNMjIxMTAxMTg0MjMxWjAvMS0wKwYDVQQDHiQAQgBHAFwAbQBhAG4AdQBlAGwALgBzAGEAYQB2AGUAZAByAGEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALlJtPi0ed9z5MgYBmRmOgR6xuymvoHokxfGGDdNBp8R1iu3D9TnOUPbFJIGZgW4bsp8yoLegN6NzRrdRZ2TiDuYCg/9JnkfYQRmYU0tPaUlCcbTHXeQGLv2/YfXG885yj2X+9xVeA7R/XZEUpRlJKG6ycRYQiUopo+BdZUIv/zFAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAKgdaTkEJaF4M3rsD+94zvbT/kjXmz1UXr5wLi2rkWyjNuMQLNvkIeSMC4pxiFNR62Y8S4DajCI6QwYBM93jrqhdnTtpeQD8AQHRnMhh6iNlEZyiWDKFEMn0WK1GTYWBOVVc7cUolLzox9+VyvO7afGQo5Cgh4A+cfgEhek1nq0I=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

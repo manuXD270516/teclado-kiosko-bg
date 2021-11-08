@@ -1,0 +1,10 @@
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\bin\Debug\KeyPad-Kiosk-BG.dll
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\bin\Debug\KeyPad-Kiosk-BG.pdb
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.csproj.AssemblyReference.cache
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\NumericKeyboard.baml
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\NumericKeyboard.g.cs
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG_MarkupCompile.cache
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.g.resources
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.csproj.CoreCompileInputs.cache
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.dll
+C:\Users\manuel.saavedra\Source\Repos\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.pdb
