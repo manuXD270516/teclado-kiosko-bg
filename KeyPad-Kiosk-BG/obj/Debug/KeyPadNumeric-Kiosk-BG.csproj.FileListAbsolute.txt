@@ -16,3 +16,13 @@ C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-
 C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPadNumeric-Kiosk-BG.csproj.CoreCompileInputs.cache
 C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.dll
 C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.pdb
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\bin\Debug\KeyPad-Kiosk-BG.dll
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\bin\Debug\KeyPad-Kiosk-BG.pdb
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPadNumeric-Kiosk-BG.csproj.AssemblyReference.cache
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\NumericKeyboard.baml
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\NumericKeyboard.g.cs
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG_MarkupCompile.cache
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.g.resources
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPadNumeric-Kiosk-BG.csproj.CoreCompileInputs.cache
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.dll
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.pdb

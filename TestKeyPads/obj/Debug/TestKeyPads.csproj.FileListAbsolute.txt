@@ -45,3 +45,27 @@ C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\TestKeyPads\obj\Debug\TestKeyPads
 C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\TestKeyPads\obj\Debug\TestKeyPads.csproj.CopyComplete
 C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\TestKeyPads\obj\Debug\TestKeyPads.exe
 C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\TestKeyPads\obj\Debug\TestKeyPads.pdb
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.exe.config
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.exe.manifest
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.application
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.exe
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.pdb
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\KeyboardQWERTY-Kiosk-BH.dll
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\KeyPad-Kiosk-BG.dll
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\KeyboardQWERTY-Kiosk-BH.pdb
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\KeyPad-Kiosk-BG.pdb
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.AssemblyReference.cache
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\MainWindow.g.cs
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\App.g.cs
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads_MarkupCompile.cache
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads_MarkupCompile.lref
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\MainWindow.baml
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.g.resources
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.Properties.Resources.resources
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.GenerateResource.cache
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CoreCompileInputs.cache
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe.manifest
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.application
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CopyComplete
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.pdb

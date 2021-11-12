@@ -14,16 +14,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Opciones del manifiesto de UAC
-          Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
-          nodo requestedExecutionLevel por uno de los siguientes.
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Si desea usar Virtualización de archivos y Registro para compatibilidad con 
-         versiones anteriores, elimine el nodo requestedExecutionLevel.
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -42,26 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyboardQWERTY-Kiosk-BH.dll" size="45056">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyboardQWERTY-Kiosk-BH.dll" size="45568">
       <assemblyIdentity name="KeyboardQWERTY-Kiosk-BH" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tzrFDa3cisrXjjLqJKl9CvoOkCSkjbBxB3RIPk0uAUc=</dsig:DigestValue>
+        <dsig:DigestValue>y70aIjEqZB3XC/YCCKnHnx9nLMhxijeP1hmxhNv2AJk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyPad-Kiosk-BG.dll" size="16896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyPad-Kiosk-BG.dll" size="17408">
       <assemblyIdentity name="KeyPad-Kiosk-BG" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dvdFnBLeiXBt67mJpE/OD5FxizQ9HHd1S584E9Hdo8Q=</dsig:DigestValue>
+        <dsig:DigestValue>VeWjx80qhvsjv6Y3OpKKCz2zC1rnCEUSllQIhvSnHmM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kgzPZ/N4mW0Y1uceYDdVg0TzQUc/G76tAvmlVaPMP3Y=</dsig:DigestValue>
+        <dsig:DigestValue>FsAN8FlNiv7RKdje748fBsCPxJJiztBNYgmqc2GDjhA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
