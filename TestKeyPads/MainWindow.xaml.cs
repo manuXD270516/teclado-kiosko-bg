@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static KeyPadQWERTY_Kiosk_BG.QwertyKeyboard;
+using static KeyPadNumeric_Kiosk_BG.NumericKeyboard;
 
 namespace TestKeyPads
 {
@@ -30,7 +32,8 @@ namespace TestKeyPads
         private void textBox1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBox textbox = sender as TextBox;
-            NumericKeyboard keypadWindow = new NumericKeyboard(textbox, this);
+            string initValue = textbox.Text;
+            NumericKeyboard keypadWindow = new NumericKeyboard(textbox, this, initValue);
             //textbox.Text = keypadWindow.Result;
             if (keypadWindow.ShowDialog() == true)
             {
@@ -41,13 +44,34 @@ namespace TestKeyPads
         private void textBox2_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBox textbox = sender as TextBox;
-            QwertyKeyboard keyboardWindow = new QwertyKeyboard(textbox, this);
+            string initValue = textbox.Text;
+            QwertyKeyboard keyboardWindow = new QwertyKeyboard(textbox, this, initValue);
             //textbox.Text = keyboardWindow.Result;
-            if (keyboardWindow.ShowDialog() == true)
-            {
+            keyboardWindow.ShowDialog();
+        }
 
-                textbox.Text = keyboardWindow.ResultContent;
-            }
+        private void passwordBox_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBox textbox = sender as TextBox;
+            string initValue = textbox.Text;
+            NumericKeyboard keypadWindow = new NumericKeyboard(textbox, this, initValue);
+            keypadWindow.ShowDialog();
+        }
+
+
+        private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            /*TextBox textbox = sender as TextBox;
+            textbox.Text = string.Concat(Enumerable.Repeat("•", textBox.Text.Length));*/
+        }
+
+        private void passwordBox_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            // init value 
+            PasswordBox passwordTextbox = sender as PasswordBox;
+            string initValue = passwordTextbox.Password;
+            NumericKeyboard keypadWindow = new NumericKeyboard(null, this, initValue, passwordTextbox);
+            keypadWindow.ShowDialog();
         }
     }
 }

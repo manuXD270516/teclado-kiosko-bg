@@ -27,6 +27,8 @@ namespace KeyPadNumeric_Kiosk_BG
 
         #endregion
 
+
+
         #region Public Properties
 
         private string _resultContent;
@@ -42,6 +44,7 @@ namespace KeyPadNumeric_Kiosk_BG
 
 
         private TextBox _resultTxt;
+
         public TextBox ResultTxt
         {
             get { return _resultTxt; }
@@ -51,16 +54,34 @@ namespace KeyPadNumeric_Kiosk_BG
             }
         }
 
+        private PasswordBox _resultPasswordTxt;
+        public PasswordBox ResultPasswordTxt
+        {
+            get { return _resultPasswordTxt; }
+            private set
+            {
+                _resultPasswordTxt = value; OnPropertyChanged(BINDING_RESULT_PROPERTY_NUMERIC);
+            }
+        }
         #endregion
 
-        public NumericKeyboard(TextBox owner, Window wndOwner)
+        public NumericKeyboard(TextBox owner, Window wndOwner, string resultContent,PasswordBox secondControl = null)
         {
             InitializeComponent();
             Owner = wndOwner;
             DataContext = this;
             ResultTxt = owner;
-            ResultContent = "";
+            ResultContent = resultContent;
+            if (secondControl != null)
+            {
+                ResultPasswordTxt = secondControl;
+            }
+
+            Left = (wndOwner.Width / 2) - (Width / 2);
+            Top = wndOwner.Height - Height;
         }
+
+
 
         private void closeKeyboard_Listener(object sender, RoutedEventArgs e)
         {
@@ -91,7 +112,14 @@ namespace KeyPadNumeric_Kiosk_BG
                     ResultContent += button.Content.ToString();
                     break;
             }
-            ResultTxt.Text = ResultContent;
+            if (ResultPasswordTxt != null)
+            {
+                ResultPasswordTxt.Password = ResultContent;
+            }
+            else
+            {
+                ResultTxt.Text = ResultContent;
+            }
         }
 
         #region INotifyPropertyChanged members
@@ -109,7 +137,7 @@ namespace KeyPadNumeric_Kiosk_BG
 
         private void Button_TouchLeave(object sender, TouchEventArgs e)
         {
-
+            //•
         }
 
         private void buttonEsc_TouchLeave(object sender, TouchEventArgs e)

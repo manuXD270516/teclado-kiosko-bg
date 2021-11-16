@@ -66,13 +66,16 @@ namespace KeyPadQWERTY_Kiosk_BG
 
         #region Constructor
 
-        public QwertyKeyboard(TextBox owner, Window wndOwner)
+       
+        public QwertyKeyboard(TextBox owner, Window wndOwner, string initValue)
         {
             InitializeComponent();
             Owner = wndOwner;
             DataContext = this;
             ResultTxt = owner;
-            ResultContent = "";
+            ResultContent = initValue;
+            Left = (wndOwner.Width / 2) - (Width / 2);
+            Top = wndOwner.Height - Height;
         }
 
         #endregion

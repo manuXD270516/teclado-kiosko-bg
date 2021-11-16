@@ -14,5 +14,8 @@
         <Label Content="Click inside the textbox:" Height="28" HorizontalAlignment="Left" Margin="169,97,0,0" VerticalAlignment="Top" />
         <Label Content="Keypad value:" Height="28" HorizontalAlignment="Left" Margin="85,35,0,0" VerticalAlignment="Top" />
         <Label Content="Keyboard value:" Height="28" HorizontalAlignment="Left" Margin="76,124,0,0" VerticalAlignment="Top" />
+        
+        <TextBox x:Name="textBox" PreviewTextInput="textBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="168,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="passwordBox" IsHitTestVisible="True" PreviewMouseDown="passwordBox_MouseDown_1" HorizontalAlignment="Left" Margin="170,211,0,0" VerticalAlignment="Top" Width="242"/>
     </Grid>
 </Window>

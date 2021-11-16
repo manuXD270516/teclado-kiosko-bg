@@ -49,31 +49,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>y70aIjEqZB3XC/YCCKnHnx9nLMhxijeP1hmxhNv2AJk=</dsig:DigestValue>
+        <dsig:DigestValue>oK8oOaroJgZgBpTUh0K96grUmnGkdKR4e9eTQ0p1lwU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyPad-Kiosk-BG.dll" size="17408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyPad-Kiosk-BG.dll" size="17920">
       <assemblyIdentity name="KeyPad-Kiosk-BG" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VeWjx80qhvsjv6Y3OpKKCz2zC1rnCEUSllQIhvSnHmM=</dsig:DigestValue>
+        <dsig:DigestValue>rqxt323bA8z4Z6sPXJ5lGw665vkufQ18c65gLtzL0uk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="10704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="11728">
       <assemblyIdentity name="TestKeyPads" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FsAN8FlNiv7RKdje748fBsCPxJJiztBNYgmqc2GDjhA=</dsig:DigestValue>
+        <dsig:DigestValue>CkQKDN3no8Zgwhz0q0pGGnQ1tUX7kAxLIMRqaV0+V2s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
