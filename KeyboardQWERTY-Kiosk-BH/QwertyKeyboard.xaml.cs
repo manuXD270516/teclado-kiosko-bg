@@ -85,6 +85,7 @@ namespace KeyPadQWERTY_Kiosk_BG
         private void closeKeyboard_Listener(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
+            //Close();
             DialogResult = false;
         }
         private void Button_TouchLeave(object sender, RoutedEventArgs e)
@@ -140,9 +141,11 @@ namespace KeyPadQWERTY_Kiosk_BG
                         break;
 
                     case "ESC":
+                        //Close();
                         DialogResult = false;
                         break;
                     case "RETURN":
+                        //Close();
                         DialogResult = true;
                         break;
 

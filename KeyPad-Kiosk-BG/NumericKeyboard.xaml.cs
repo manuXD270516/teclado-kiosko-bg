@@ -65,7 +65,19 @@ namespace KeyPadNumeric_Kiosk_BG
         }
         #endregion
 
-        public NumericKeyboard(TextBox owner, Window wndOwner, string resultContent,PasswordBox secondControl = null)
+
+        public bool windowVisible;
+        public int indexCharacterToInsert { get; set; }
+        public bool enabledSelectionChange;
+
+        public NumericKeyboard()
+        {
+            windowVisible = false;
+            indexCharacterToInsert = 0;
+            enabledSelectionChange = true;
+        }
+
+        public NumericKeyboard(TextBox owner, Window wndOwner, string resultContent, PasswordBox secondControl = null)
         {
             InitializeComponent();
             Owner = wndOwner;
@@ -79,6 +91,10 @@ namespace KeyPadNumeric_Kiosk_BG
 
             Left = (wndOwner.Width / 2) - (Width / 2);
             Top = wndOwner.Height - Height;
+
+            windowVisible = true;
+            indexCharacterToInsert = 0;
+            enabledSelectionChange = true;
         }
 
 
@@ -86,7 +102,10 @@ namespace KeyPadNumeric_Kiosk_BG
         private void closeKeyboard_Listener(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            DialogResult = false;
+            windowVisible = false;
+            Hide();
+            //Close();
+            //DialogResult = false;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -96,20 +115,38 @@ namespace KeyPadNumeric_Kiosk_BG
             switch (button.CommandParameter.ToString())
             {
                 case "ESC":
-                    DialogResult = false;
+                    windowVisible = false;
+                    Hide();
+                    //Close();
+                    //DialogResult = false;
                     break;
 
                 case "RETURN":
-                    DialogResult = true;
+                    windowVisible = false;
+                    Hide();
+                    //Close();
+                    //DialogResult = true;
                     break;
 
                 case "BACK":
-                    if (ResultContent.Length > 0)
-                        ResultContent = ResultContent.Remove(ResultContent.Length - 1);
+                    if (ResultContent.Length > 0 && indexCharacterToInsert > 0)
+                    {
+                        ResultContent = ResultContent.Remove(indexCharacterToInsert-1,1);
+                        indexCharacterToInsert--;
+                        enabledSelectionChange = false;
+                    }
+                    //ResultContent = ResultContent.Remove(ResultContent.Length - 1);
+
                     break;
 
                 default:
-                    ResultContent += button.Content.ToString();
+                    ResultContent = ResultContent.Insert(indexCharacterToInsert++, button.Content.ToString());
+                    /*if (indexCharacterToInsert == ResultContent.Length - 1)
+                    {
+                        
+                    }*/
+                    enabledSelectionChange = false;
+                    //ResultContent += button.Content.ToString();
                     break;
             }
             if (ResultPasswordTxt != null)

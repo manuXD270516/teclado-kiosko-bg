@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oK8oOaroJgZgBpTUh0K96grUmnGkdKR4e9eTQ0p1lwU=</dsig:DigestValue>
+        <dsig:DigestValue>Wg2iz7Y3KngD1c9Su7mmwAswhSQbxkcxoyQ0e2mibUw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rqxt323bA8z4Z6sPXJ5lGw665vkufQ18c65gLtzL0uk=</dsig:DigestValue>
+        <dsig:DigestValue>pGNAwAVBdTke+ysdKQL7SkEW+Kqh/6ByuvpazIB9jYo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="11728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="13264">
       <assemblyIdentity name="TestKeyPads" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CkQKDN3no8Zgwhz0q0pGGnQ1tUX7kAxLIMRqaV0+V2s=</dsig:DigestValue>
+        <dsig:DigestValue>DD4vjSHi2y4JbRtFhEAUMY1P3o2ZtU09JdPyVnlAPqQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
