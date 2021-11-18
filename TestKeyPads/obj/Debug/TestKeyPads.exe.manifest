@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyboardQWERTY-Kiosk-BH.dll" size="45568">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyboardQWERTY-Kiosk-BH.dll" size="46080">
       <assemblyIdentity name="KeyboardQWERTY-Kiosk-BH" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Wg2iz7Y3KngD1c9Su7mmwAswhSQbxkcxoyQ0e2mibUw=</dsig:DigestValue>
+        <dsig:DigestValue>17Kt04LKPEAWwvqNz4/dNbZnBAXepb4Pyg+ewtQh9Xs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pGNAwAVBdTke+ysdKQL7SkEW+Kqh/6ByuvpazIB9jYo=</dsig:DigestValue>
+        <dsig:DigestValue>rAjHF3CVmmwmnKGGDhXcutaLOJnlO4t42Fnxdh25dCU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="13264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="13776">
       <assemblyIdentity name="TestKeyPads" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DD4vjSHi2y4JbRtFhEAUMY1P3o2ZtU09JdPyVnlAPqQ=</dsig:DigestValue>
+        <dsig:DigestValue>GE1iKcJUlftaYEsp/1IvPFqlrR/GeF/cXunZETjvI9c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

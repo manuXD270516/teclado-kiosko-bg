@@ -12,12 +12,13 @@
     <Grid>
         <TextBox 
             x:Name="t1"
-            SelectionChanged="TextBox_SelectionChanged"
-            PreviewMouseDown="textBox1_PreviewMouseDown" Height="34" HorizontalAlignment="Left" Margin="168,30,0,0" VerticalAlignment="Top" Width="303"  />
+            SelectionChanged="t1_SelectionChanged"
+            PreviewMouseDown="t1_PreviewMouseDown" Height="34" HorizontalAlignment="Left" Margin="168,30,0,0" VerticalAlignment="Top" Width="303"  />
         <Label Content="Click inside the textbox:" Height="28" HorizontalAlignment="Left" Margin="168,7,0,0" VerticalAlignment="Top" />
         <TextBox 
             x:Name="t2"
-            PreviewMouseDown="textBox2_PreviewMouseDown" Height="34" HorizontalAlignment="Left" Margin="169,120,0,0" VerticalAlignment="Top" Width="320" />
+            SelectionChanged="t2_SelectionChanged"
+            PreviewMouseDown="t2_PreviewMouseDown" Height="34" HorizontalAlignment="Left" Margin="169,120,0,0" VerticalAlignment="Top" Width="320" />
         <Label Content="Click inside the textbox:" Height="28" HorizontalAlignment="Left" Margin="169,97,0,0" VerticalAlignment="Top" />
         <Label Content="Keypad value:" Height="28" HorizontalAlignment="Left" Margin="85,35,0,0" VerticalAlignment="Top" />
         <Label Content="Keyboard value:" Height="28" HorizontalAlignment="Left" Margin="76,124,0,0" VerticalAlignment="Top" />

@@ -66,9 +66,14 @@ namespace KeyPadNumeric_Kiosk_BG
         #endregion
 
 
+        #region additional properties
+
         public bool windowVisible;
         public int indexCharacterToInsert { get; set; }
         public bool enabledSelectionChange;
+
+        #endregion
+
 
         public NumericKeyboard()
         {

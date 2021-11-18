@@ -32,3 +32,4 @@ E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\Keyboar
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyPadQWERTY-Kiosk-BG.csproj.CoreCompileInputs.cache
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyboardQWERTY-Kiosk-BH.dll
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyboardQWERTY-Kiosk-BH.pdb
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyPadQWERTY-Kiosk-BG.csproj.AssemblyReference.cache

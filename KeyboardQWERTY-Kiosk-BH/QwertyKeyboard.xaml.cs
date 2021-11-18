@@ -64,18 +64,38 @@ namespace KeyPadQWERTY_Kiosk_BG
 
         #endregion
 
+        #region additional properties
+
+        public bool windowVisible;
+        public int indexCharacterToInsert { get; set; }
+        public bool enabledSelectionChange;
+
+        #endregion
+
+
         #region Constructor
 
-       
-        public QwertyKeyboard(TextBox owner, Window wndOwner, string initValue)
+
+        public QwertyKeyboard()
+        {
+            windowVisible = false;
+            indexCharacterToInsert = 0;
+            enabledSelectionChange = true;
+        }
+
+        public QwertyKeyboard(TextBox owner, Window wndOwner, string resultContent)
         {
             InitializeComponent();
             Owner = wndOwner;
             DataContext = this;
             ResultTxt = owner;
-            ResultContent = initValue;
+            ResultContent = resultContent;
             Left = (wndOwner.Width / 2) - (Width / 2);
             Top = wndOwner.Height - Height;
+
+            windowVisible = true;
+            indexCharacterToInsert = 0;
+            enabledSelectionChange = true;
         }
 
         #endregion
@@ -85,8 +105,8 @@ namespace KeyPadQWERTY_Kiosk_BG
         private void closeKeyboard_Listener(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            //Close();
-            DialogResult = false;
+            windowVisible = false;
+            Hide();
         }
         private void Button_TouchLeave(object sender, RoutedEventArgs e)
         {
@@ -134,6 +154,7 @@ namespace KeyPadQWERTY_Kiosk_BG
                                 }
                             }
                         }
+                        enabledSelectionChange = false;
                         break;
 
                     case "ALT":
@@ -141,25 +162,33 @@ namespace KeyPadQWERTY_Kiosk_BG
                         break;
 
                     case "ESC":
-                        //Close();
-                        DialogResult = false;
+                        windowVisible = false;
+                        Hide();
+                        //DialogResult = false;
                         break;
                     case "RETURN":
-                        //Close();
-                        DialogResult = true;
+                        windowVisible = false;
+                        Hide();
+                        //DialogResult = true;
                         break;
 
                     case "BACK":
-                        if (ResultContent.Length > 0)
-                            ResultContent = ResultContent.Remove(ResultContent.Length - 1);
+                        if (ResultContent.Length > 0 && indexCharacterToInsert > 0)
+                        {
+                            ResultContent = ResultContent.Remove(indexCharacterToInsert - 1, 1);
+                            indexCharacterToInsert--;
+                            enabledSelectionChange = false;
+                        }
                         break;
                     case "SPACE":
-                        ResultContent += " ";
+                        ResultContent = ResultContent.Insert(indexCharacterToInsert++, " ");
+                        enabledSelectionChange = false;
                         break;
 
 
                     default:
-                        ResultContent += button.Content.ToString();
+                        ResultContent = ResultContent.Insert(indexCharacterToInsert++, button.Content.ToString());
+                        enabledSelectionChange = false;
                         break;
                 }
             }

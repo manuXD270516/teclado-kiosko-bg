@@ -25,14 +25,23 @@ namespace TestKeyPads
     /// </summary>
     public partial class MainWindow : Window
     {
-        public NumericKeyboard keypadWindow;
+        public NumericKeyboard numericKeyboard;
         public int lastIndexCharacterNumericKeyboard;
+        
+        public QwertyKeyboard qwertyKeyboard;
+        public int lastIndexCharacterQwertyKeyboard;
 
         public MainWindow()
         {
             InitializeComponent();
-            keypadWindow = new NumericKeyboard();
+
+            numericKeyboard = new NumericKeyboard();
             lastIndexCharacterNumericKeyboard = 0;
+
+            qwertyKeyboard = new QwertyKeyboard();
+            lastIndexCharacterQwertyKeyboard = 0;
+
+
         }
 
         /*public delegate void testDelegate();
@@ -46,17 +55,19 @@ namespace TestKeyPads
         };*/
 
        
-        private void textBox1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void t1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (!keypadWindow.windowVisible)
+            restartSelectionStartOnTextBox();
+
+            if (!numericKeyboard.windowVisible)
             {
                 Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                 {
-                    TextBox textbox = sender as TextBox;
+                    TextBox currentTextBox = sender as TextBox;
                     //int index = textBox.SelectionStart;
-                    string initValue = textbox.Text;
-                    keypadWindow = new NumericKeyboard(textbox, this, initValue) { indexCharacterToInsert = lastIndexCharacterNumericKeyboard };
-                    keypadWindow.Show();
+                    string initValue = currentTextBox.Text;
+                    numericKeyboard = new NumericKeyboard(currentTextBox, this, initValue) { indexCharacterToInsert = lastIndexCharacterNumericKeyboard };
+                    numericKeyboard.Show();
                 }));
             }
             /*var t = new Thread(_ =>
@@ -81,24 +92,34 @@ namespace TestKeyPads
             }*/
         }
 
-        private void textBox2_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void restartSelectionStartOnTextBox()
         {
             t1.SelectionStart = lastIndexCharacterNumericKeyboard;
-
-
-            TextBox textbox = sender as TextBox;
-            string initValue = textbox.Text;
-            QwertyKeyboard keyboardWindow = new QwertyKeyboard(textbox, this, initValue);
-            //textbox.Text = keyboardWindow.Result;
-            keyboardWindow.ShowDialog();
+            t2.SelectionStart = lastIndexCharacterQwertyKeyboard;
         }
 
-        private void passwordBox_MouseDown(object sender, MouseButtonEventArgs e)
+
+        private void t2_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            TextBox textbox = sender as TextBox;
-            string initValue = textbox.Text;
-            NumericKeyboard keypadWindow = new NumericKeyboard(textbox, this, initValue);
-            keypadWindow.ShowDialog();
+            restartSelectionStartOnTextBox();
+
+            if (!qwertyKeyboard.windowVisible)
+            {
+                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    TextBox currentTextBox = sender as TextBox;
+                    //int index = textBox.SelectionStart;
+                    string initValue = currentTextBox.Text;
+                    qwertyKeyboard = new QwertyKeyboard(currentTextBox, this, initValue) { indexCharacterToInsert = lastIndexCharacterQwertyKeyboard };
+                    qwertyKeyboard.Show();
+                }));
+            }
+
+            /* TextBox textbox = sender as TextBox;
+             string initValue = textbox.Text;
+             QwertyKeyboard keyboardWindow = new QwertyKeyboard(textbox, this, initValue);
+             //textbox.Text = keyboardWindow.Result;
+             keyboardWindow.ShowDialog();*/
         }
 
 
@@ -123,20 +144,36 @@ namespace TestKeyPads
             Application.Current.Shutdown();
         }
 
-        private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
+        private void t1_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            TextBox textbox = sender as TextBox;
+            TextBox currentTextBox = sender as TextBox;
 
-            if (keypadWindow.enabledSelectionChange)
+            if (numericKeyboard.enabledSelectionChange)
             {
-                keypadWindow.indexCharacterToInsert = textbox.SelectionStart;
-                lastIndexCharacterNumericKeyboard = keypadWindow.indexCharacterToInsert;
+                numericKeyboard.indexCharacterToInsert = currentTextBox.SelectionStart;
+                lastIndexCharacterNumericKeyboard = numericKeyboard.indexCharacterToInsert;
             }
             else
             {
-                keypadWindow.enabledSelectionChange = true;
+                numericKeyboard.enabledSelectionChange = true;
             }
         }
+
+        private void t2_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            TextBox currentTextBox = sender as TextBox;
+
+            if (qwertyKeyboard.enabledSelectionChange)
+            {
+                qwertyKeyboard.indexCharacterToInsert = currentTextBox.SelectionStart;
+                lastIndexCharacterQwertyKeyboard = qwertyKeyboard.indexCharacterToInsert;
+            }
+            else
+            {
+                qwertyKeyboard.enabledSelectionChange = true;
+            }
+        }
+
 
         private void TextBox_LostMouseCapture(object sender, MouseEventArgs e)
         {
@@ -158,7 +195,8 @@ namespace TestKeyPads
             TextBox textBox = Keyboard.FocusedElement as TextBox;
             if (textBox != null)
             {
-                t1.SelectionStart = lastIndexCharacterNumericKeyboard;
+                restartSelectionStartOnTextBox();
+                //t1.SelectionStart = lastIndexCharacterNumericKeyboard;
                 //t2.SelectionStart = lastIndexCharacterNumericKeyboard;
 
                 /*TraversalRequest tRequest = new TraversalRequest(FocusNavigationDirection.Right);
@@ -167,6 +205,7 @@ namespace TestKeyPads
             }
         }
 
+       
         /*private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
             TextBox textbox = sender as TextBox;
