@@ -244,6 +244,7 @@ namespace KeyPadQWERTY_Kiosk_BG
             ResultContent = lastResultContent;
             ResultTxt.Text = ResultContent;
 
+            // cambios parciales
 
         }
     }

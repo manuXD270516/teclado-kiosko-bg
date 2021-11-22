@@ -69,3 +69,27 @@ E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKey
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CopyComplete
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.pdb
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.exe.config
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.exe.manifest
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.application
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.exe
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\TestKeyPads.pdb
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\KeyboardQWERTY-Kiosk-BH.dll
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\KeyPad-Kiosk-BG.dll
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\KeyboardQWERTY-Kiosk-BH.pdb
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\bin\Debug\KeyPad-Kiosk-BG.pdb
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.AssemblyReference.cache
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\MainWindow.g.cs
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\App.g.cs
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads_MarkupCompile.cache
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads_MarkupCompile.lref
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\MainWindow.baml
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.g.resources
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.Properties.Resources.resources
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.GenerateResource.cache
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CoreCompileInputs.cache
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe.manifest
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.application
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CopyComplete
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe
+C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.pdb
