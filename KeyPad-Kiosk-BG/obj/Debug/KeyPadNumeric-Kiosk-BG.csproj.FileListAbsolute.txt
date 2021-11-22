@@ -25,4 +25,3 @@ E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPadNumeric-Kiosk-BG.csproj.CoreCompileInputs.cache
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.dll
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPad-Kiosk-BG.pdb
-E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyPad-Kiosk-BG\obj\Debug\KeyPadNumeric-Kiosk-BG.csproj.AssemblyReference.cache

@@ -205,7 +205,20 @@ namespace TestKeyPads
             }
         }
 
-       
+        private void t1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            
+            if (textBox.Text.Length > 4)
+            {
+                numericKeyboard.applyValidations(false);
+            }
+            
+            
+            
+        }
+
+
         /*private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
             TextBox textbox = sender as TextBox;

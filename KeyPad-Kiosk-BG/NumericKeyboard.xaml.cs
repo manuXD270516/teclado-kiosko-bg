@@ -68,9 +68,13 @@ namespace KeyPadNumeric_Kiosk_BG
 
         #region additional properties
 
-        public bool windowVisible;
+        private string lastResultContent { get; set; }
+        public bool windowVisible { get; set; }
         public int indexCharacterToInsert { get; set; }
-        public bool enabledSelectionChange;
+        public bool enabledSelectionChange { get; set; }
+        public bool keyPressedAccepted { get; set; }
+
+
 
         #endregion
 
@@ -80,6 +84,7 @@ namespace KeyPadNumeric_Kiosk_BG
             windowVisible = false;
             indexCharacterToInsert = 0;
             enabledSelectionChange = true;
+            keyPressedAccepted = true;
         }
 
         public NumericKeyboard(TextBox owner, Window wndOwner, string resultContent, PasswordBox secondControl = null)
@@ -89,6 +94,7 @@ namespace KeyPadNumeric_Kiosk_BG
             DataContext = this;
             ResultTxt = owner;
             ResultContent = resultContent;
+            lastResultContent = "";
             if (secondControl != null)
             {
                 ResultPasswordTxt = secondControl;
@@ -100,6 +106,7 @@ namespace KeyPadNumeric_Kiosk_BG
             windowVisible = true;
             indexCharacterToInsert = 0;
             enabledSelectionChange = true;
+            keyPressedAccepted = true;
         }
 
 
@@ -134,23 +141,28 @@ namespace KeyPadNumeric_Kiosk_BG
                     break;
 
                 case "BACK":
+                    lastResultContent = ResultContent;
                     if (ResultContent.Length > 0 && indexCharacterToInsert > 0)
                     {
-                        ResultContent = ResultContent.Remove(indexCharacterToInsert-1,1);
+                        ResultContent = ResultContent.Remove(indexCharacterToInsert - 1, 1);
                         indexCharacterToInsert--;
-                        enabledSelectionChange = false;
                     }
-                    //ResultContent = ResultContent.Remove(ResultContent.Length - 1);
+                    enabledSelectionChange = false;
+                    //ResultContent = ResultContent.Remove(ResultContent.Length - 1
 
+                    if (keyPressedAccepted)
+                    {
+                    }
                     break;
 
                 default:
+                    lastResultContent = ResultContent;
                     ResultContent = ResultContent.Insert(indexCharacterToInsert++, button.Content.ToString());
-                    /*if (indexCharacterToInsert == ResultContent.Length - 1)
-                    {
-                        
-                    }*/
                     enabledSelectionChange = false;
+
+                    if (keyPressedAccepted)
+                    {
+                    }
                     //ResultContent += button.Content.ToString();
                     break;
             }
@@ -193,6 +205,30 @@ namespace KeyPadNumeric_Kiosk_BG
             {
                 this.DragMove();
             }
+        }
+
+        public void applyValidations(bool backPressed)
+        {
+            if (backPressed)
+            {
+                indexCharacterToInsert++;
+            }
+            else
+            {
+                indexCharacterToInsert--;
+            }
+            ResultContent = lastResultContent;
+
+            if (ResultPasswordTxt == null)
+            {
+                ResultTxt.Text = ResultContent;
+            }
+            else
+            {
+                ResultPasswordTxt.Password = ResultContent;
+            }
+
+
         }
     }
 }

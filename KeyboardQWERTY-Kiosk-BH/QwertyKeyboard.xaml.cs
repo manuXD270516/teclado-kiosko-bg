@@ -66,9 +66,10 @@ namespace KeyPadQWERTY_Kiosk_BG
 
         #region additional properties
 
-        public bool windowVisible;
+        public bool windowVisible { get; set; }
         public int indexCharacterToInsert { get; set; }
-        public bool enabledSelectionChange;
+        public bool enabledSelectionChange { get; set; }
+        private string lastResultContent { get; set; }
 
         #endregion
 
@@ -90,6 +91,7 @@ namespace KeyPadQWERTY_Kiosk_BG
             DataContext = this;
             ResultTxt = owner;
             ResultContent = resultContent;
+            lastResultContent = "";
             Left = (wndOwner.Width / 2) - (Width / 2);
             Top = wndOwner.Height - Height;
 
@@ -173,6 +175,7 @@ namespace KeyPadQWERTY_Kiosk_BG
                         break;
 
                     case "BACK":
+                        lastResultContent = ResultContent;
                         if (ResultContent.Length > 0 && indexCharacterToInsert > 0)
                         {
                             ResultContent = ResultContent.Remove(indexCharacterToInsert - 1, 1);
@@ -181,12 +184,14 @@ namespace KeyPadQWERTY_Kiosk_BG
                         }
                         break;
                     case "SPACE":
+                        lastResultContent = ResultContent;
                         ResultContent = ResultContent.Insert(indexCharacterToInsert++, " ");
                         enabledSelectionChange = false;
                         break;
 
 
                     default:
+                        lastResultContent = ResultContent;
                         ResultContent = ResultContent.Insert(indexCharacterToInsert++, button.Content.ToString());
                         enabledSelectionChange = false;
                         break;
@@ -224,6 +229,22 @@ namespace KeyPadQWERTY_Kiosk_BG
             {
                 this.DragMove();
             }
+        }
+
+        public void applyValidations(bool backPressed)
+        {
+            if (backPressed)
+            {
+                indexCharacterToInsert++;
+            }
+            else
+            {
+                indexCharacterToInsert--;
+            }
+            ResultContent = lastResultContent;
+            ResultTxt.Text = ResultContent;
+
+
         }
     }
 }

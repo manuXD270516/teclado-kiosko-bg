@@ -23,6 +23,7 @@ C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\KeyboardQWERTY-Kiosk-BH\obj\Debug
 C:\Users\rene.ribera\Downloads\KeyPad-Kiosk-BG\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyboardQWERTY-Kiosk-BH.pdb
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\bin\Debug\KeyboardQWERTY-Kiosk-BH.dll
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\bin\Debug\KeyboardQWERTY-Kiosk-BH.pdb
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyPadQWERTY-Kiosk-BG.csproj.AssemblyReference.cache
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\QwertyKeyboard.g.cs
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\GeneratedInternalTypeHelper.g.cs
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyboardQWERTY-Kiosk-BH_MarkupCompile.cache
@@ -32,4 +33,3 @@ E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\Keyboar
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyPadQWERTY-Kiosk-BG.csproj.CoreCompileInputs.cache
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyboardQWERTY-Kiosk-BH.dll
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyboardQWERTY-Kiosk-BH.pdb
-E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\KeyboardQWERTY-Kiosk-BH\obj\Debug\KeyPadQWERTY-Kiosk-BG.csproj.AssemblyReference.cache

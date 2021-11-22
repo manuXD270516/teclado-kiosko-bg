@@ -66,6 +66,6 @@ E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKey
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CoreCompileInputs.cache
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe.manifest
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.application
+E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CopyComplete
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe
 E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.pdb
-E:\Trabajos dependientes\Banco Ganadero SA\Desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CopyComplete
