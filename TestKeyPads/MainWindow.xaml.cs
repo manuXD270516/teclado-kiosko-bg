@@ -27,7 +27,11 @@ namespace TestKeyPads
     {
         public NumericKeyboard numericKeyboard;
         public int lastIndexCharacterNumericKeyboard;
-        
+
+        public NumericKeyboard numericKeyboard_Password;
+        public int lastIndexCharacterNumericKeyboard_Password;
+
+
         public QwertyKeyboard qwertyKeyboard;
         public int lastIndexCharacterQwertyKeyboard;
 
@@ -40,6 +44,9 @@ namespace TestKeyPads
 
             qwertyKeyboard = new QwertyKeyboard();
             lastIndexCharacterQwertyKeyboard = 0;
+
+            numericKeyboard_Password = new NumericKeyboard();
+            lastIndexCharacterNumericKeyboard_Password = 0;
 
 
         }
@@ -132,10 +139,19 @@ namespace TestKeyPads
         private void passwordBox_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             // init value 
-            PasswordBox passwordTextbox = sender as PasswordBox;
-            string initValue = passwordTextbox.Password;
-            NumericKeyboard keypadWindow = new NumericKeyboard(null, this, initValue, passwordTextbox);
-            keypadWindow.ShowDialog();
+            restartSelectionStartOnTextBox();
+
+            if (!numericKeyboard_Password.windowVisible)
+            {
+                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    PasswordBox currentTextBox = sender as PasswordBox;
+                    //int index = textBox.SelectionStart;
+                    string initValue = currentTextBox.Password;
+                    numericKeyboard_Password = new NumericKeyboard(null, this, initValue, currentTextBox) { indexCharacterToInsert = lastIndexCharacterNumericKeyboard_Password };
+                    numericKeyboard_Password.Show();
+                }));
+            }
         }
 
 
@@ -216,6 +232,16 @@ namespace TestKeyPads
             
             
             
+        }
+
+        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordBox p = sender as PasswordBox;
+            if (p.Password.Length > 3)
+            {
+                numericKeyboard_Password.applyValidations(backPressed: false);
+            }
+            p.Focus();
         }
 
 
