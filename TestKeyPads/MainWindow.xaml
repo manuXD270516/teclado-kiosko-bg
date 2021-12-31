@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:TestKeyPads"
         mc:Ignorable="d"
         MouseDown="Window_MouseDown"
+        GotMouseCapture="Window_GotMouseCapture"
         WindowState="Maximized"
         Closed="Window_Closed"
         Title="MainWindow" Height="350" Width="525">
@@ -14,17 +15,24 @@
             x:Name="t1"
             TextChanged="t1_TextChanged"
             SelectionChanged="t1_SelectionChanged"
+            LostFocus="t1_LostFocus"
+            PreviewKeyDown="t1_PreviewKeyDown"
+            PreviewTextInput="t1_PreviewTextInput"
             PreviewMouseDown="t1_PreviewMouseDown" Height="34" HorizontalAlignment="Left" Margin="168,30,0,0" VerticalAlignment="Top" Width="303"  />
         <Label Content="Click inside the textbox:" Height="28" HorizontalAlignment="Left" Margin="168,7,0,0" VerticalAlignment="Top" />
         <TextBox 
             x:Name="t2"
             SelectionChanged="t2_SelectionChanged"
+            TextChanged="t2_TextChanged"
+            LostFocus="t2_LostFocus"
+            PreviewKeyDown="t2_PreviewKeyDown"
+            PreviewTextInput="t2_PreviewTextInput"
             PreviewMouseDown="t2_PreviewMouseDown" Height="34" HorizontalAlignment="Left" Margin="169,120,0,0" VerticalAlignment="Top" Width="320" />
         <Label Content="Click inside the textbox:" Height="28" HorizontalAlignment="Left" Margin="169,97,0,0" VerticalAlignment="Top" />
         <Label Content="Keypad value:" Height="28" HorizontalAlignment="Left" Margin="85,35,0,0" VerticalAlignment="Top" />
         <Label Content="Keyboard value:" Height="28" HorizontalAlignment="Left" Margin="76,124,0,0" VerticalAlignment="Top" />
         
-        <TextBox x:Name="textBox" PreviewTextInput="textBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="168,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="168,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <PasswordBox x:Name="passwordBox" 
                      PasswordChanged="passwordBox_PasswordChanged"
                      IsHitTestVisible="True" PreviewMouseDown="passwordBox_MouseDown_1" HorizontalAlignment="Left" Margin="170,211,0,0" VerticalAlignment="Top" Width="242"/>

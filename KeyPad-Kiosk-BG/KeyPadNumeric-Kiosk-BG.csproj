@@ -48,6 +48,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ExtensionPasswordBox.cs" />
     <Compile Include="NumericKeyboard.xaml.cs">
       <DependentUpon>NumericKeyboard.xaml</DependentUpon>
     </Compile>

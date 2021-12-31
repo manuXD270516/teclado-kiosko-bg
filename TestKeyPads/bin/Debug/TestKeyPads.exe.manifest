@@ -42,38 +42,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyboardQWERTY-Kiosk-BH.dll" size="46592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyboardQWERTY-Kiosk-BH.dll" size="50688">
       <assemblyIdentity name="KeyboardQWERTY-Kiosk-BH" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WPMWn2qiiH9/hgAHFbzmmIydZacyjPmu3Hw+hocQrMA=</dsig:DigestValue>
+        <dsig:DigestValue>fWOfL1F5wTYkBtVDaCxVFRJZP/71b2yZHbGiXf1qYdY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyPad-Kiosk-BG.dll" size="18944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KeyPad-Kiosk-BG.dll" size="22016">
       <assemblyIdentity name="KeyPad-Kiosk-BG" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OIo/dGl4lbvza0X7DnkmVZlOknDBKoQStRDKpyYqTHo=</dsig:DigestValue>
+        <dsig:DigestValue>U1LNH/1As5qcMZJk2QSA/sr64IbztGf2ijCopKA/1m8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="14800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestKeyPads.exe" size="16336">
       <assemblyIdentity name="TestKeyPads" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e6AOa4PJT2F12sqTmP28l91r1lBzGKSS3c3L1frqUZY=</dsig:DigestValue>
+        <dsig:DigestValue>pRbRdEdjWwVwlTh8n3RonTzRNlLqDSwSCUVl+HaYtV0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

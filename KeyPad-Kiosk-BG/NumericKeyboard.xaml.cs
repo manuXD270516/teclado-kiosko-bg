@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KeyPad_Kiosk_BG.Extensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -54,6 +55,14 @@ namespace KeyPadNumeric_Kiosk_BG
             }
         }
 
+        public int CurrentLengthText
+        {
+            get
+            {
+                return _resultContent.Length;
+            }
+        }
+
         private PasswordBox _resultPasswordTxt;
         public PasswordBox ResultPasswordTxt
         {
@@ -74,6 +83,10 @@ namespace KeyPadNumeric_Kiosk_BG
         public bool enabledSelectionChange { get; set; }
         public bool keyPressedAccepted { get; set; }
 
+
+        // physical keyboard
+        private bool isCapsLock = false;
+        private bool isShift = false;
 
 
         #endregion
@@ -120,11 +133,115 @@ namespace KeyPadNumeric_Kiosk_BG
             //DialogResult = false;
         }
 
+        public void closeKeyboard()
+        {
+            windowVisible = false;
+            Hide();
+        }
+
+
+        private void syncKeyPressed(string commandParameter, string content)
+        {
+
+            switch (commandParameter.ToUpper())
+            {
+                case "ESC":
+                    closeKeyboard();
+                    //Close();
+                    //DialogResult = false;
+                    break;
+
+                case "RETURN":
+                    closeKeyboard();
+                    //DialogResult = true;
+                    break;
+
+
+                case "DELETE":
+                    // Text: A  B   C   D,  DELETE: B, Result: A    C   D   
+                    lastResultContent = ResultContent;
+                    if (ResultContent.Length > 0 && indexCharacterToInsert < ResultContent.Length)
+                    {
+                        ResultContent = ResultContent.Remove(indexCharacterToInsert, 1);
+                    }
+                    enabledSelectionChange = false;
+                    break;
+                case "BACK":
+                    lastResultContent = ResultContent;
+                    if (ResultContent.Length > 0 && indexCharacterToInsert > 0)
+                    {
+                        ResultContent = ResultContent.Remove(indexCharacterToInsert - 1, 1);
+                        indexCharacterToInsert--;
+                    }
+                    enabledSelectionChange = false;
+                    //ResultContent = ResultContent.Remove(ResultContent.Length - 1
+
+                    break;
+
+                // PHYSICAL KEYBOARD ========================================================
+
+                case "ESCAPE":
+                    closeKeyboard();
+                    break;
+                case "LEFT":
+                    if (indexCharacterToInsert > 0)
+                    {
+                        indexCharacterToInsert--;
+
+                    }
+                    applySelectionStart();
+                    break;
+                case "RIGHT":
+                    if (indexCharacterToInsert < CurrentLengthText)
+                    {
+                        indexCharacterToInsert++;
+                    }
+                    applySelectionStart();
+                    break;
+
+
+                default:
+                    lastResultContent = ResultContent;
+                    ResultContent = ResultContent.Insert(indexCharacterToInsert++, content);
+                    enabledSelectionChange = false;
+
+                    //ResultContent += button.Content.ToString();
+                    break;
+            }
+            applyContentText();
+        }
+
+        private void applyContentText()
+        {
+            if (ResultPasswordTxt != null)
+            {
+                ResultPasswordTxt.Password = ResultContent;
+            }
+            else
+            {
+                ResultTxt.Text = ResultContent;
+            }
+        }
+
+        private void applySelectionStart()
+        {
+            if (ResultTxt != null)
+            {
+                ResultTxt.SelectionStart = indexCharacterToInsert;
+            }
+            else
+            {
+                ResultPasswordTxt.SetSelection(indexCharacterToInsert, 1);
+            }
+        }
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
 
-            switch (button.CommandParameter.ToString())
+            syncKeyPressed(button.CommandParameter.ToString(), button.Content.ToString());
+
+            /*switch (button.CommandParameter.ToString())
             {
                 case "ESC":
                     windowVisible = false;
@@ -173,7 +290,7 @@ namespace KeyPadNumeric_Kiosk_BG
             else
             {
                 ResultTxt.Text = ResultContent;
-            }
+            }*/
         }
 
         #region INotifyPropertyChanged members
@@ -230,5 +347,63 @@ namespace KeyPadNumeric_Kiosk_BG
 
 
         }
+
+        #region "Other methods"
+        public bool keyIsNumeric(Key selectedKey) => (selectedKey >= Key.NumPad0 && selectedKey <= Key.NumPad9) || (selectedKey >= Key.D0 && selectedKey <= Key.D9);
+
+        public bool keyIsLetter(Key selectedKey) => (selectedKey >= Key.A && selectedKey <= Key.Z);
+
+        public bool keyIsSpace(Key selectedKey) => selectedKey == Key.Space;
+        public bool keyIsLetterOrSpace(Key selectedKey) => keyIsLetter(selectedKey) || keyIsSpace(selectedKey);
+
+
+        public bool keyIsArrowsNavigation(Key selectedKey) => new Key[] { Key.Left, Key.Right }.Contains(selectedKey);
+
+        public bool keyIsClosedWindow(Key selectedKey) => new Key[] { Key.Return, Key.Escape }.Contains(selectedKey);
+
+        public bool keyIsBack(Key selectedKey) => selectedKey == Key.Back;
+        public bool keyIsDelete(Key selectedKey) => selectedKey == Key.Delete;
+
+        public bool keyIsNavigationOrClose(Key selectedKey) => keyIsArrowsNavigation(selectedKey) || keyIsClosedWindow(selectedKey) || keyIsBack(selectedKey) || keyIsDelete(selectedKey);
+
+        public bool keyIsShiftWithLetter(Key selectedKey) => Keyboard.Modifiers == ModifierKeys.Shift && keyIsLetter(selectedKey);
+        public bool keyIsShiftWithOtherCharacter(Key selectedKey) => Keyboard.Modifiers == ModifierKeys.Shift && keyIsOtherCharacter(selectedKey);
+
+
+        public bool keyIsFunction(Key selectedKey) => selectedKey >= Key.F1 && selectedKey <= Key.F24;
+
+        public bool keyIsOtherCharacter(Key selectedKey) =>
+            !keyIsNumeric(selectedKey) &&
+            !keyIsLetterOrSpace(selectedKey) &&
+            !keyIsArrowsNavigation(selectedKey) &&
+            !keyIsNavigationOrClose(selectedKey) &&
+            !keyIsBack(selectedKey) &&
+            !keyIsFunction(selectedKey);
+
+        public string INVALID_KEY = "invalidkey";
+        public void pressKeyOfPhysicalKeyboard(Key selectedKey)
+        {
+            string contentResult;
+            if (keyIsNumeric(selectedKey))
+            {
+                contentResult = Convert.ToString(selectedKey.ToString().Last());
+            }
+            else if (keyIsNavigationOrClose(selectedKey))
+            {
+                contentResult = selectedKey.ToString();
+            }
+            else // no permited
+            {
+                contentResult = INVALID_KEY;
+            }
+
+            if (!contentResult.Equals(INVALID_KEY))
+            {
+                syncKeyPressed(contentResult, contentResult);
+            }
+        }
+
+        #endregion
+
     }
 }

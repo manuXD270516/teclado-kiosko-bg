@@ -90,6 +90,5 @@ C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado vir
 C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CoreCompileInputs.cache
 C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe.manifest
 C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.application
-C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.csproj.CopyComplete
 C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.exe
 C:\Users\manuel.saavedra\Documents\Trabajo\Requerimientos\Onboarding\Teclado virtual Kiosco\desarrollo\teclados-kiosco-bg\TestKeyPads\obj\Debug\TestKeyPads.pdb

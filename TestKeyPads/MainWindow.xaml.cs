@@ -25,30 +25,46 @@ namespace TestKeyPads
     /// </summary>
     public partial class MainWindow : Window
     {
-        public NumericKeyboard numericKeyboard;
-        public int lastIndexCharacterNumericKeyboard;
+        public NumericKeyboard numericKeyboard_t1;
+        public int lastIndexCharacterNumericKeyboard_t1;
 
+        public QwertyKeyboard qwertyKeyboard_t2;
+        public int lastIndexCharacterQwertyKeyboard_t2;
+
+
+        // other controls
         public NumericKeyboard numericKeyboard_Password;
         public int lastIndexCharacterNumericKeyboard_Password;
 
+        private const int INDEX_T1_TEXT_CONTROL = 1;
+        private const int INDEX_T2_TEXT_CONTROL = 2;
 
-        public QwertyKeyboard qwertyKeyboard;
-        public int lastIndexCharacterQwertyKeyboard;
+        private const int INDEX_OTRO_COTROL = -1;
+
+        //private bool isCapLock = false;
+
+
 
         public MainWindow()
         {
             InitializeComponent();
 
-            numericKeyboard = new NumericKeyboard();
-            lastIndexCharacterNumericKeyboard = 0;
+            initCustomKeyboards();
 
-            qwertyKeyboard = new QwertyKeyboard();
-            lastIndexCharacterQwertyKeyboard = 0;
+        }
+
+        private void initCustomKeyboards()
+        {
+            numericKeyboard_t1 = new NumericKeyboard();
+            lastIndexCharacterNumericKeyboard_t1 = 0;
+
+            qwertyKeyboard_t2 = new QwertyKeyboard();
+            lastIndexCharacterQwertyKeyboard_t2 = 0;
+
+
 
             numericKeyboard_Password = new NumericKeyboard();
             lastIndexCharacterNumericKeyboard_Password = 0;
-
-
         }
 
         /*public delegate void testDelegate();
@@ -61,20 +77,61 @@ namespace TestKeyPads
 
         };*/
 
-       
+        private void hideVisibilityKeyboardExcept(int focusInputTextIndex)
+        {
+            switch (focusInputTextIndex)
+            {
+                case INDEX_T1_TEXT_CONTROL: // T1
+
+                    qwertyKeyboard_t2.closeKeyboard();
+
+                    /*qwertyKeyboard_t2.Hide();
+                    qwertyKeyboard_t2.windowVisible = false;*/
+
+                    break;
+
+                case INDEX_T2_TEXT_CONTROL: // T2
+
+                    numericKeyboard_t1.closeKeyboard();
+
+                    /*numericKeyboard_t1.Hide();
+                    numericKeyboard_t1.windowVisible = false;*/
+
+                    break;
+
+                default: // any other point of window
+
+                    qwertyKeyboard_t2.closeKeyboard();
+                    numericKeyboard_t1.closeKeyboard();
+
+                    /*numericKeyboard_t1.Hide();
+                    numericKeyboard_t1.windowVisible = false;
+
+                    qwertyKeyboard_t2.Hide();
+                    qwertyKeyboard_t2.windowVisible = false;*/
+
+                    break;
+            }
+        }
+
         private void t1_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             restartSelectionStartOnTextBox();
 
-            if (!numericKeyboard.windowVisible)
+            if (!numericKeyboard_t1.windowVisible)
             {
                 Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                 {
                     TextBox currentTextBox = sender as TextBox;
-                    //int index = textBox.SelectionStart;
                     string initValue = currentTextBox.Text;
-                    numericKeyboard = new NumericKeyboard(currentTextBox, this, initValue) { indexCharacterToInsert = lastIndexCharacterNumericKeyboard };
-                    numericKeyboard.Show();
+                    numericKeyboard_t1 = new NumericKeyboard(currentTextBox, this, initValue) { indexCharacterToInsert = lastIndexCharacterNumericKeyboard_t1 };
+                    numericKeyboard_t1.Show();
+
+                    t1.SelectionStart = lastIndexCharacterNumericKeyboard_t1;
+                    t1.Focus();
+
+                    hideVisibilityKeyboardExcept(INDEX_T1_TEXT_CONTROL);
+
                 }));
             }
             /*var t = new Thread(_ =>
@@ -101,8 +158,8 @@ namespace TestKeyPads
 
         private void restartSelectionStartOnTextBox()
         {
-            t1.SelectionStart = lastIndexCharacterNumericKeyboard;
-            t2.SelectionStart = lastIndexCharacterQwertyKeyboard;
+            t1.SelectionStart = lastIndexCharacterNumericKeyboard_t1;
+            t2.SelectionStart = lastIndexCharacterQwertyKeyboard_t2;
         }
 
 
@@ -110,35 +167,25 @@ namespace TestKeyPads
         {
             restartSelectionStartOnTextBox();
 
-            if (!qwertyKeyboard.windowVisible)
+            if (!qwertyKeyboard_t2.windowVisible)
             {
                 Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                 {
                     TextBox currentTextBox = sender as TextBox;
-                    //int index = textBox.SelectionStart;
                     string initValue = currentTextBox.Text;
-                    qwertyKeyboard = new QwertyKeyboard(currentTextBox, this, initValue) { indexCharacterToInsert = lastIndexCharacterQwertyKeyboard };
-                    qwertyKeyboard.Show();
+                    qwertyKeyboard_t2 = new QwertyKeyboard(currentTextBox, this, initValue) { indexCharacterToInsert = lastIndexCharacterQwertyKeyboard_t2 };
+                    qwertyKeyboard_t2.Show();
+
+                    t2.Focus();
+                    t2.SelectionStart = lastIndexCharacterQwertyKeyboard_t2;
+
+                    hideVisibilityKeyboardExcept(INDEX_T2_TEXT_CONTROL);
                 }));
             }
-
-            /* TextBox textbox = sender as TextBox;
-             string initValue = textbox.Text;
-             QwertyKeyboard keyboardWindow = new QwertyKeyboard(textbox, this, initValue);
-             //textbox.Text = keyboardWindow.Result;
-             keyboardWindow.ShowDialog();*/
-        }
-
-
-        private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            /*TextBox textbox = sender as TextBox;
-            textbox.Text = string.Concat(Enumerable.Repeat("•", textBox.Text.Length));*/
         }
 
         private void passwordBox_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
-            // init value 
             restartSelectionStartOnTextBox();
 
             if (!numericKeyboard_Password.windowVisible)
@@ -146,7 +193,6 @@ namespace TestKeyPads
                 Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                 {
                     PasswordBox currentTextBox = sender as PasswordBox;
-                    //int index = textBox.SelectionStart;
                     string initValue = currentTextBox.Password;
                     numericKeyboard_Password = new NumericKeyboard(null, this, initValue, currentTextBox) { indexCharacterToInsert = lastIndexCharacterNumericKeyboard_Password };
                     numericKeyboard_Password.Show();
@@ -164,14 +210,14 @@ namespace TestKeyPads
         {
             TextBox currentTextBox = sender as TextBox;
 
-            if (numericKeyboard.enabledSelectionChange)
+            if (numericKeyboard_t1.enabledSelectionChange)
             {
-                numericKeyboard.indexCharacterToInsert = currentTextBox.SelectionStart;
-                lastIndexCharacterNumericKeyboard = numericKeyboard.indexCharacterToInsert;
+                numericKeyboard_t1.indexCharacterToInsert = currentTextBox.SelectionStart;
+                lastIndexCharacterNumericKeyboard_t1 = numericKeyboard_t1.indexCharacterToInsert;
             }
             else
             {
-                numericKeyboard.enabledSelectionChange = true;
+                numericKeyboard_t1.enabledSelectionChange = true;
             }
         }
 
@@ -179,70 +225,207 @@ namespace TestKeyPads
         {
             TextBox currentTextBox = sender as TextBox;
 
-            if (qwertyKeyboard.enabledSelectionChange)
+            if (qwertyKeyboard_t2.enabledSelectionChange)
             {
-                qwertyKeyboard.indexCharacterToInsert = currentTextBox.SelectionStart;
-                lastIndexCharacterQwertyKeyboard = qwertyKeyboard.indexCharacterToInsert;
+                qwertyKeyboard_t2.indexCharacterToInsert = currentTextBox.SelectionStart;
+                lastIndexCharacterQwertyKeyboard_t2 = qwertyKeyboard_t2.indexCharacterToInsert;
             }
             else
             {
-                qwertyKeyboard.enabledSelectionChange = true;
+                qwertyKeyboard_t2.enabledSelectionChange = true;
             }
         }
 
 
-        private void TextBox_LostMouseCapture(object sender, MouseEventArgs e)
-        {
-            int a = 1;
-        }
-
-        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            int a = 1;
-        }
-
-        private void TextBox_LostTouchCapture(object sender, TouchEventArgs e)
-        {
-
-        }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            TextBox textBox = Keyboard.FocusedElement as TextBox;
-            if (textBox != null)
-            {
-                restartSelectionStartOnTextBox();
-                //t1.SelectionStart = lastIndexCharacterNumericKeyboard;
-                //t2.SelectionStart = lastIndexCharacterNumericKeyboard;
-
-                /*TraversalRequest tRequest = new TraversalRequest(FocusNavigationDirection.Right);
-                textBox.MoveFocus(tRequest);*/
-                
-            }
+            hideVisibilityKeyboardExcept(INDEX_OTRO_COTROL);
         }
 
         private void t1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TextBox textBox = sender as TextBox;
-            
-            if (textBox.Text.Length > 4)
+            TextBox currentTextBox = sender as TextBox;
+
+            if (currentTextBox.Text.Length > 4)
             {
-                numericKeyboard.applyValidations(false);
+                numericKeyboard_t1.applyValidations(false);
             }
-            
-            
-            
+            currentTextBox.SelectionStart = numericKeyboard_t1.indexCharacterToInsert;
+            lastIndexCharacterNumericKeyboard_t1 = currentTextBox.SelectionStart;
+            currentTextBox.Focus();
         }
 
         private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             PasswordBox p = sender as PasswordBox;
-            if (p.Password.Length > 3)
+            if (p.Password.Length > 10)
             {
                 numericKeyboard_Password.applyValidations(backPressed: false);
             }
             p.Focus();
         }
+
+        private void t1_LostFocus(object sender, RoutedEventArgs e)
+        {
+            hideOnlyKeyboard(INDEX_T1_TEXT_CONTROL);
+        }
+
+        private void t2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox currentTextBox = sender as TextBox;
+
+            
+            if (currentTextBox.Text.Length > 20)
+            {
+                qwertyKeyboard_t2.applyValidations(false);
+            }
+            currentTextBox.SelectionStart = qwertyKeyboard_t2.indexCharacterToInsert;
+            lastIndexCharacterQwertyKeyboard_t2 = currentTextBox.SelectionStart;
+            currentTextBox.Focus();
+        }
+
+        private void Window_GotMouseCapture(object sender, MouseEventArgs e)
+        {
+            TextBox textBox = Keyboard.FocusedElement as TextBox;
+            if (textBox == null)
+            {
+                hideVisibilityKeyboardExcept(INDEX_OTRO_COTROL);
+            }
+        }
+
+        private void t2_LostFocus(object sender, RoutedEventArgs e)
+        {
+            hideOnlyKeyboard(INDEX_T2_TEXT_CONTROL);
+        }
+
+        private void hideOnlyKeyboard(int focusInputTextIndex)
+        {
+            switch (focusInputTextIndex)
+            {
+                case INDEX_T1_TEXT_CONTROL: // CI 
+
+                    numericKeyboard_t1.closeKeyboard();
+                    break;
+
+                case INDEX_T2_TEXT_CONTROL: // Complemento
+
+                    qwertyKeyboard_t2.closeKeyboard();
+                    break;
+
+                default: // any other point of window
+                    numericKeyboard_t1.closeKeyboard();
+                    qwertyKeyboard_t2.closeKeyboard();
+                    break;
+            }
+
+        }
+        bool isCapsLock = false;
+        bool isShift = false;
+
+        private void t1_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+
+            /*if ((Keyboard.GetKeyStates(Key.CapsLock) & KeyStates.Toggled) == KeyStates.Toggled)
+            {
+                MessageBox.Show("Key CapsLock Activate");
+            }
+            else
+            {
+                MessageBox.Show("Key CapsLock Desactivate");
+
+            }*/
+
+            /*bool isCapLock = e.Key == Key.CapsLock;
+            bool isCapital = e.Key == Key.Capital;
+            bool isShift = Keyboard.Modifiers == ModifierKeys.Shift;
+
+            bool x = Keyboard.IsKeyDown(Key.Capital);
+
+            if (Keyboard.Modifiers == ModifierKeys.Shift && e.Key == Key.A)
+            {
+                string foo = "test value";
+
+            }*/
+            // numeric
+            /*int keyValue = (int)e.Key;
+            char foo = default;
+
+
+            // Letter
+            if (e.Key == Key.CapsLock)
+            {
+                isCapsLock = !isCapsLock;
+            }
+
+            string content = e.Key.ToString();
+
+
+            if (e.Key >= Key.A && e.Key <= Key.Z)
+            {
+                bool shift = isShift;
+                if (isCapsLock)
+                {
+                    shift = !shift;
+                }
+                int s = e.Key.ToString()[0];
+                if (!shift)
+                {
+                    s += 32;
+                }
+                content = ((char)s).ToString();
+            }
+
+            string ch = ((char)e.Key).ToString();
+            int i;
+
+            if (int.TryParse(e.Key.ToString(), out i))
+            {
+                MessageBox.Show("Number");
+            }*/
+
+            /*string aa = e.Key.ToString();
+            string xd = e.Key.ToString();
+
+            int pos = t1.SelectionStart;*/
+            numericKeyboard_t1.pressKeyOfPhysicalKeyboard(e.Key);
+            e.Handled = true;
+        }
+
+
+        private void t2_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            Dictionary<string, bool> result = qwertyKeyboard_t2.pressKeyOfPhysicalKeyboard(selectedKey: e.Key);
+            bool tabSelected;
+            if (result.TryGetValue("TabSelected", out tabSelected) && tabSelected)
+            {
+                e.Handled = tabSelected;
+            } else
+            {
+                e.Handled = result["CommitPreviewKeyDown"];
+
+            }
+
+            /*if (!e.Handled)
+            {
+                t2.Text = x;
+            }-*/
+        }
+
+        private void t2_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Dictionary<string, bool> result = qwertyKeyboard_t2.pressKeyOfPhysicalKeyboard(keyContent: e.Text);
+            e.Handled = result["CommitPreviewTextInput"];
+        }
+
+
+        private void t1_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+
+        }
+
+        
+
 
 
         /*private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
